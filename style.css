@@ -159,5 +159,15 @@ footer {
     line-height: 30px;
 }
 
+/* DEBUG */
+
+.debug section .container .row >.column {
+    border: dashed black 2px;
+}
+
+.debug .footup .banner .column {
+    border: dashed white 2px;
+}
+
 
 
