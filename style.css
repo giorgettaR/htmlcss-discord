@@ -31,7 +31,7 @@
     .pill {
         display: inline-block;
         vertical-align: middle;
-        border-radius: 25%;
+        border-radius: 35%;
         text-align: center;
         height: 50px;
         width: fit-content;
@@ -47,6 +47,7 @@
 
     .pill.white {
         background-color: white;
+        color: black;
     }
 
     .pill.black {
@@ -56,60 +57,87 @@
 
 /* STYLE HEADER*/
 
-    section.headup  {
-        background-color: aqua;
+    header {
+        background-color: rgb(53, 83, 139);
+        color: white;
     }
+    
+    /* STYLE HEADUP */
 
-    .headup .row {
-        width: 100%;
-        height: 60px;
-        justify-content: center;
-        align-items: center;
-    }
+        .headup .logo img {
+            display: block;
+            margin: auto;
+        }
 
-    .headup .row >.column {
-        background-color: yellowgreen;
-        height: 40px;
-        line-height: 40px;
-    }
+        .headup .row {
+            width: 100%;
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .headup .logo,
-    .headup .login {
-        width: 20%;
-    }
+        .headup .row >.column {
+            height: 40px;
+            line-height: 35px;
+        }
+
+        .headup .logo,
+        .headup .login {
+            width: 20%;
+        }
 
 
-    .headup .row >.nav {
-        display: flex;
-        justify-content: center; 
-        align-items: center;   
-        width: 60%;
-    }
+        .headup .row >.nav {
+            display: flex;
+            justify-content: center; 
+            align-items: center;   
+            width: 60%;
+        }
 
-    .headup .nav >.column {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-    }
+        .headup .nav >.column {
+            width: 40%;
+            line-height: 40px;
+            text-align: center;
+        }
 
-    .headup .login {
-        text-align: end;
-    }
+        .headup .column.nav .column{
+            margin: 5px;
+        }
 
-    section.headdown {
-        background-color: blue;
-    }
+        .headup .login {
+            justify-content: end;
+            align-items: center;
+        }
 
-    .headdown .row {
-        justify-content: center;
-    }
+    /* STYLE HEADDOWN */
+        section.headdown {
+            background-image: url(./img/jumbo.png);
+            background-size: 100% auto;
+        }
 
-    .headdown .row .column{
-        background-color: blueviolet;
-        width: 70%;
-        height: 200px;
-    }
+        .headdown >.container {
+            height: 500px;
+            padding-bottom: 130px;
+        }
+
+        .headdown .row {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .headdown .row .column{
+            width: 70%;
+            height: min-content;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .headdown h1 {
+            font-size: 50px;
+        }
+
+
 
 /* STYLE MAIN */
 
