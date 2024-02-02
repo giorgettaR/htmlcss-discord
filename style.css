@@ -7,6 +7,10 @@
         font-family: 'Uni Sans Demo', sans-serif;
     }
 
+    ul {
+        list-style: none;
+    }
+
 /* GENERAL SETTINGS */
 
     .container {
@@ -237,40 +241,85 @@
 /* STYLE FOOTER */
 
     footer {
+        padding-top: 30px;
         background-color: rgba(0, 0, 0, 0.712);
+        color: white;
     }
 
     .footup .row  {
-        height: 180px;
+        height: min-content;
     }
 
-    .footup .add {
-        background-color: rosybrown;
+    .footup .social {
         width: 30%;
     }
 
-    .footup .banner {
-        background-color: rgba(15, 168, 189, 0.678);
-        width: 70%;
+    .social >* {
+        margin-top: 20px;
+    }
+
+    .social h1  {
+        color: rgb(55, 43, 226);
+        margin-top: 0;
+    }
+
+    .social img {
+        display: inline-block;
+        max-width: 25px;
+    }
+
+    .fa {
+        text-align: center;
+        font-size: 20px;
+        width: 35px;
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .footup .container.menu {
+        width: 100%;
+    }
+
+    .footup .container.menu .column{
+        width: 25%;
     }
 
     .footup .banner .column {
         width: 25%;
     }
 
-    .footdown .row {
-        background-color: beige;
-        height: 60px;
+    .footup .menu li {
+        margin: 4px;
+        font-size: 12px;
+    }
+    
+    .footup .menu .category {
+        color: rgb(55, 43, 226);
+        margin: 6px;
+        margin-left: 4px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+
+    .footdown >.row {
+        border-top: solid black 1px;
+        padding-top: 30px;
+        height: min-content;
         justify-content: space-between;
-        align-items: center;
     }
 
     .footdown .logo,
     .footdown .button {
         width: 15%;
-        height: 40px;
+        height: min-content;
         text-align: center;
-        line-height: 30px;
+    }
+
+    .footdown .column.button .row {
+        justify-content: end;
+        align-items: center;
     }
 
 /* DEBUG */
@@ -283,5 +332,4 @@
         border: dashed white 2px;
     }
 
-
-
+    
