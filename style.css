@@ -25,8 +25,10 @@
         padding: 2vh;
     }
 
-    section .container >.row {
+    .container >.row {
         width: 100%;
+        display: flex;
+        flex-direction: row;
     }
 
 
@@ -53,19 +55,48 @@
         color: white;
     }
 
+    div[class^="col"].svgimg {
+        display: block;
+        margin: auto;
+    }
+
+    .col-15 {
+        width: 15%;
+    }
+
+    .col-17 {
+        width: 17%;
+    }
+
+    .col-32 {
+        width: 32%;
+    }
+
+    .col-40 {
+        width: 40%;
+    }
+
+    .col-60 {
+        width: 60%;
+    }
+
+    .col-text {
+        margin: 15px;
+    }
+
 /* STYLE HEADER*/
 
     header {
-        background-image: url(./img/jumbo.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
         color: white;
-        font-size: 14px;
-        padding-top: 2vh;
+        margin-bottom: 50px;
     }
-    
+
     /* STYLE HEADUP */
+        
+        .headup {
+            background-color: rgba(37,94,233,255);
+            padding-bottom: 30px;
+        }
 
         .headup .row {
             width: 100%;
@@ -74,80 +105,63 @@
             font-size: 12px;
         }
 
-        .headup .logo,
-        .headup .login {
-            width: 20%;
-        }
-        
-        .headup .logo img {
-            display: block;
-            margin: auto;
-        }
-
-        .headup .row >.nav {
-            display: flex;
+        .headup .container.nav {
             justify-content: center; 
-            align-items: center;   
-            width: 60%;
+            align-items: center;
+            width: 100%;
         }
 
-        .headup .nav >.column {
-            width: 40%;
+        .headup .container.nav .col-text {
             text-align: center;
         }
 
-        .headup .column.nav .column{
-            margin: 5px;
-        }
-
         .headup .login {
-        text-align: end;
+            text-align: end;
         }
     
-    /* STYLE HEADDOWN */
+    /* STYLE HERO */
 
-        .headdown >.container {
-            height: 440px;
+        .hero {
+            background-image: url(./img/jumbo.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            font-size: 14px;
+        }    
+        
+        .hero >.container {
+            height: 500px;
             padding-bottom: 130px;
         }
-        .headdown .row {
+        .hero .row {
             justify-content: center;
             flex-direction: column;
             align-items: center;
         }
 
-        .headdown .row .column{
-            width: 70%;
+        .hero .row .column{
+            width: 60%;
             height: fit-content;
             text-align: center;
         }
 
-        .headdown .text.title {
+        .hero .text.title {
             font-size: 35px;
-            padding-bottom: 35px;
+            padding-bottom: 55px;
         }
 
-        .headdown .text.hook {
+        .hero .text.hook {
             font-weight: bold;
             line-height: 25px;
-            padding-bottom: 20px;
+            padding-bottom: 50px;
         }
 
 /* STYLE MAIN */
 
-    section.main1,
-    section.main3 {
-        background-color: white;
+
+    .main2 .container >.row {
+        flex-direction: row-reverse;
     }
-
-    /* section.main2,
-    section.main4 {
-        background-color: grey;
-    } */
-
-        section.main2 .container {
-            flex-direction: row-reverse;
-        }
 
     main h1 {
         font-size: 30px;
@@ -155,20 +169,15 @@
         margin-left: 0;
     }
 
+    main >* {
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+
     /* horizontal */
 
-        .container.main1 >.row,
-        .container.main2 >.row,
-        .container.main3 >.row {
-            inline-size: min-content;
-            align-items: start;
+        img.horizontal.svgimg {
             width: 100%;
-        }
-
-        img.horizontal.img {
-            width: 60%;
-            display: block;
-            margin: auto;
         }
 
         .horizontal.text {
@@ -186,17 +195,14 @@
 
     /* vertical */
 
-        section.main4 .container {
-            flex-direction: column;
-        }
-
-        .container.main4 >.row {
-            inline-size: min-content;
+        .container.vertical >.row {
             align-items: center;
+            flex-direction: column;
             width: 100%;
         }
 
         .main4 .vertical.text {
+            width: 100%;
             text-align: center;
             height: min-content;
         }
@@ -207,12 +213,10 @@
 
         .main4 .vertical.text p {
             margin: 0% 13%;
-
         }
 
-        .main4 img.vertical.img {
-            display: block;
-            margin: auto;
+        img.vertical.svgimg {
+            height: 100%;
         }
 
         .main4 .vertical.text.calltoaction {
@@ -224,97 +228,87 @@
             flex-direction: column;
             justify-content: end;
             margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 25px;
         }
-
-        .main4 .vertical.button {
-            margin-bottom: 100px;
-        }
-
 
 /* STYLE FOOTER */
 
     footer {
-        padding-top: 30px;
         background-color: rgba(0, 0, 0, 0.856);
         color: white;
-    }
-
-    .footup .row  {
-        height: min-content;
-    }
-
-    .footup .social {
-        width: 30%;
-    }
-
-    .social >* {
-        margin-top: 20px;
-    }
-
-    .social h1  {
-        color: rgb(68, 107, 214);
-        margin-top: 0;
-    }
-
-    .social img {
-        display: inline-block;
-        max-width: 20px;
-    }
-
-    .fa {
-        text-align: center;
-        font-size: 20px;
-        width: 30px;
-        color: white;
-        text-decoration: none;
-    }
-
-    .footup .container.menu {
-        width: 100%;
-    }
-
-    .footup .container.menu .column{
-        width: 25%;
-    }
-
-    .footup .menu li {
-        margin: 8px;
-        font-size: 12px;
-    }
-    
-    .footup .menu .category {
-        color: rgb(68, 107, 214);
-        margin: 10px;
-        margin-left: 8px;
-        font-size: 15px;
-        font-weight: bold;
-    }
-    
-    .footdown >.row {
-        border-top: solid black 1px;
         padding-top: 30px;
-        height: min-content;
-        justify-content: space-between;
     }
 
-    .footdown .logo,
-    .footdown .button {
-        width: 15%;
-        height: min-content;
-    }
+    /* STYLE FOOTUP */
 
-    .footdown .column.button {
-        text-align: end;
-    }
+        .footup .row  {
+            height: min-content;
+        }
+
+        .footup .social >* {
+            margin-top: 20px;
+        }
+
+        .footup .social h1  {
+            color: rgb(68, 107, 214);
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        .footup .social img {
+            display: inline-block;
+            max-width: 20px;
+        }
+
+        .footup .fa {
+            text-align: center;
+            font-size: 20px;
+            width: 30px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footup .menu ul :first-child {
+            color: rgb(68, 107, 214);
+            margin: 10px;
+            margin-left: 8px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .footup .menu li {
+            margin: 8px;
+            font-size: 12px;
+        }
+    
+    /* STYLE FOOTDOWN */
+
+        section.footdown {
+            padding-bottom: 50px;
+        }
+    
+        .footdown >.row {
+            border-top: solid rgb(68, 107, 214) 1px;
+            padding-top: 30px;
+            height: min-content;
+            justify-content: space-between;
+        }
+
+        .footdown .logo,
+        .footdown .button {
+            height: min-content;
+        }
+
+        .footdown .button {
+            text-align: end;
+        }
 
 /* DEBUG */
 
-    .debug section .container .row >.column {
+    .debug .container .row div[class^="col"] {
         border: dashed black 2px;
     }
 
-    .debug .footup .banner .column {
-        border: dashed white 2px;
-    }
 
     
