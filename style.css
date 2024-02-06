@@ -195,6 +195,10 @@
         font-size: 18px;
     }
 
+    main section:nth-of-type(even) {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
     main .container.horizontal >.row {
         align-items: center;
     }        
@@ -208,9 +212,21 @@
         margin-left: 0;
     }
 
-    main >* {
+    main >section {
         padding-bottom: 25vh;
         padding-top: 25vh;
+    }
+
+    main >.wave {
+        background-image: url(./img/wave.svg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: 25vh;
+        opacity: 0.1;
+    }
+
+    main >.wave:nth-last-of-type(even) {
+        transform: scaleY(-1);
     }
 
     /* horizontal */
